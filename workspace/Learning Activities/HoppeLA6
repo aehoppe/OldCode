@@ -1,0 +1,119 @@
+Alexander Hoppe
+Learning Activity 6
+Plus
+
+Methods:
+
+    Name: Object()
+    Access: public
+    Params: none
+    Return: Object - this is the constructor
+    Description: This method constructs a new object of type Object
+    Use: Any time you would instantiate an Object, you would use this. 
+
+    Name: getClass()
+    Access: public
+    Params: none
+    Return: Class<? extends X> - where X is the static type of the expression or
+        reference this method is called on
+    Description: This method returns the Class object related to the type of the
+        runtime object of the reference it is called on. It gives the runtime 
+        type that reference holds.
+    Use: This method could be used to find out the specific class of a reference
+        to an interface or abstract class at runtime so appropriate operations
+        could be used for that specific type. 
+
+    Name: hashCode()
+    Access: public 
+    Params: none
+    Return: int - the hash code value of the object
+    Description: gives the hash code value for the object for use in hash tables
+        or other data structures, a somewhat unique identifier for the object
+    Use: If I were implementing a hashMap, I would use this method to get hash 
+        code values for the Objects stored in the map so they could be easily 
+        and effectively found with the right algorithm. 
+
+    Name: equals()
+    Access: public
+    Params: Object obj - The Object for this Object to be compared to
+    Return: boolean - true only if this Object is the same as the obj argument
+    Description: This method compares two objects for equality, but on a higher
+        level than the == operator. It essentially creates an "equivalence rel-
+        ationship" (credit: Java API 7) between the two objects that is transi-
+        tive, reflexive, symmetric, and consistent. 
+    Use: Any time one would compare two objects as being equal, one would use 
+        this method. I would argue it is one of the most useful methods of the
+        Object class and subclasses. For example, comparing an input String to a
+        given String in an if/else block. 
+    
+    Name: clone()
+    Access: protected - Intended to be implemented to call super.clone(), so it
+        is only available in inheritance. (Which is every Object anyway)
+    Params: none
+    Return: Object - a duplicated copy of the Object in memory, not just a 
+        duplicate reference. 
+    Description: This method returns an object copy of the object it is called 
+        on, but a separate allocation of memory than just duplicating the refer-
+        ence. The object calling the method on itself must implement Cloneable.
+    Use: This method could be useful for copying an object into local memory 
+        from a database or online repo. 
+
+    Name: toString()
+    Access: public
+    Params: none
+    Return: String - A String representation of the Object. 
+    Description: Returns as a String a textual representation of the object. Is
+        expected to be overridden in subclasses, as the default Object toString()
+        gives the rather unhelpful "classname@hashvalue" string.
+    Use: Any time an Object needs to be visually represented as text, this meth-
+        od should be called. For instance, if I wanted to print an array's con-
+        tents to the console, I would use the toString() method. 
+
+    Name: notify()
+    Access: public
+    Params: none
+    Return: void 
+    Description: "Wakes up" one thread on this Object's monitor that has been 
+        told to "wait". The activated thread then has to wait until the current
+        thread lets go of the Object, and it competes with other threads as per
+        usual. 
+    Use: I think this could be used to reactivate a process that had previously 
+        been stopped. If a certain thread would be inefficient before another 
+        one executes, it could be told to "wait" and then be reactivated by the
+        notify() method.
+
+    Name: notifyAll()
+    Access: public
+    Params: none
+    Return: void
+    Description: "Wakes up" all the threads on an Object's monitor that have been
+        told to "wait". It is like the notify() method, but it reactivates all
+        of the threads waiting on this Object's monitor. 
+    Use: This method could be used to make sure no threads are left waiting on 
+        this Object's monitor, to make sure everything gets done. I don't know
+        if that happens, but maybe?
+
+    Name: wait(long timeout, int nanos)
+    Access: public
+    Params: long timeout - the maximum realtime wait time in milliseconds, 
+        int nanos - additional nanoseconds to be added to the wait time
+    Return: void
+    Description: This method causes the current thread to wait, either until the
+        amount of real time specified in the parameters passes, or it is "woken
+        up" by a call of the notify() or notifyAll() method. If no parameters 
+        are specified, the thread waits indefinitely. 
+    Use: This method could likely be used in conjunction with the notify() or
+        notifyAll() method to put a thread that is resource intensive on hold
+        until another thread activates that makes it more efficient.
+
+    Name: finalize()
+    Access: protected - intended for subclasses to implement specific teardown 
+        procedures related to their resources
+    Params: none
+    Return: void
+    Description: This method is called by the garbage collector once there are 
+        no references left to the Object, and in subclasses it gives space to 
+        run specific actions necessary before getting rid of the object. 
+    Use: If I were using an I/O class, I would want to put code that closes all
+        my resources, such as input and output streams, before the Object is
+        garbage collected. 

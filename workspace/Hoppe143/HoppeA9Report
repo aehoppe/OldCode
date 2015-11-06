@@ -1,0 +1,27 @@
+Alexander Hoppe
+6 Jun 2015
+Assignment 9 Report
+
+Starting out: 
+    writing pseudocode for the algorithms for checking completeness. 
+First thing is checking region state, so the mapping of region number to top 
+left square in region is the first step. Figured it out! 
+column coordinate = columns * (region % rows)
+row coordinate = rows * (region / rows)
+
+My current plan is to add the ints in each region into a set as the basis of my 
+comparison for duplicates. This lends itself well to reusability, so I will go
+for the challenge assignment and make iterators for the types of region. Methods
+for getting these iterators will be private, and they will be private inner 
+classes of the SudokuModel class. They will be used in a private State method, 
+checkState, which will be called by the getRowState, getColumnState, and 
+getRegionState methods with the appropriate iterator getter in the checkState
+call. 
+
+In the iterator classes, there are private fields to hold onto the row/column/
+region and the position in each one. 
+Also put the row and column of the first position in a region as a private field
+in the RegionIterator class.
+
+Had a bit of trouble with indices for the iterators, cleared it up nicely! All 
+finished!

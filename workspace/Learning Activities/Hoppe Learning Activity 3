@@ -1,0 +1,50 @@
+Alexander Hoppe
+17 Apr 2015
+Learing Activity 3
+
+1) A RuntimeException with the message "Instantiated in m4"
+Exception in thread "main" java.lang.RuntimeException: Instantiated in m4
+    at Oops.m4(Oops.java:27)
+    at Oops.m3(Oops.java:22)
+    at Oops.m2(Oops.java:18)
+    at Oops.m1(Oops.java:12)
+    at Oops.main(Oops.java:33)
+
+2) A RuntimeException with the message "Instantiated in m2"
+Exception in thread "main" java.lang.RuntimeException: Instantiated in m2
+    at Oops.m2(Oops.java:17)
+    at Oops.m1(Oops.java:12)
+    at Oops.main(Oops.java:33)
+    
+3) A RuntimeException with the message "Instantiated in the constructor"
+Exception in thread "main" java.lang.RuntimeException: Instantiated in the constructor
+    at Oops.<init>(Oops.java:8)
+    at Oops.main(Oops.java:33)
+
+4) A RuntimeException with the message "Instantiated in main"
+Exception in thread "main" java.lang.RuntimeException: Instantiated in main
+    at Oops.main(Oops.java:34)
+
+5) A RuntimeException with the message "Instantiated in the field declaration"
+Exception in thread "main" java.lang.RuntimeException: Instantiated in the field declaration
+    at Oops.<init>(Oops.java:4)
+    at Oops.main(Oops.java:33)
+
+6) A RuntimeException with the same message as before, but now it's at <clinit>
+Exception in thread "main" java.lang.RuntimeException: Instantiated in the field declaration
+    at Oops.<clinit>(Oops.java:4)
+
+7) Surprisingly to me, Throwables are just like any other object. They can be tied
+to a reference, and if another Throwable is assigned to that variable higher in
+the call stack, it overwrites it. Also, with Exceptions, they record where they
+occurred in the call stack the moment they are initialized, but do not stop program
+execution until they are thrown. Regardless of where they are thrown, however, 
+they report the information they stored when initialized.
+
+In terms of object lifetimes, I learned a little more about the order in which
+things happen at the beginning of runtime in the VM. First, a method called 
+<clinit> initializes the static parts of the class, including main. Then, whenever 
+the class is instantiated, a method called <init> executes the code in the 
+constructor, and all non-static members of the class are created. After that,
+things progress as we are already familiar. 
+

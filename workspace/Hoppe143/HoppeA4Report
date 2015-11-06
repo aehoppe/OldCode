@@ -1,0 +1,36 @@
+Alexander Hoppe
+Jinguji CSC 143 
+3 Apr 2015
+
+Note to self: Don't procrastinate. You should have started sooner. 
+
+Starting notes:
+    As always, I open the report up very first! My thoughts right now are that the
+best way to start is to create the four test cases and outline everything they're 
+going to test in a separate place. Let's plan out the test cases here:
+
+Constructors:
+-For each bounded structure, I need to test normal functionality x 2, boundary at 
+capacity of zero, and IllegalArgumentException for negative in the constructor.
+-For unbounded structures, just test the constructor works x 1, no parameters. 
+
+Methods:
+-Create an @Before method that instantiates two test structures, use each one for
+different normal functioning tests. With each one I will test each boundary and 
+each exception case as well as one normal case, for a total of two normal and two
+for each boundary and exception. 
+-Much of this code can be copied and tweaked for the other classes! Save some time!
+    
+**Note: Man, it's tough to write test cases before writing the code! You really 
+have to think everything through right from the start!  
+
+Boundaries and exceptions (normal cases not mentioned, each boundary tested twice):
+-For add/push, boundary at empty (can't really test twice), boundary at almost 
+full (if bounded) and exception at full (if bounded) (7 cases total)
+-for remove/pop, boundary at almost empty (only one case), exception at empty 
+(only one case) (4 cases total)
+for front, boundary at almost empty (only one case), exception at empty (only one
+ case) (4 cases total)
+
+Coding note: what do I do if I need to call other methods to be tested in my 
+test methods? I guess I'll just do it. 

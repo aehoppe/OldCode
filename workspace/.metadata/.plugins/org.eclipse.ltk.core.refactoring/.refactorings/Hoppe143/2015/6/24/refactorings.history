@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;csc143.test.sudoku.SudokuTest3A&apos; to &apos;SudokuTest3a&apos;&#x0D;&#x0A;- Original project: &apos;Hoppe143&apos;&#x0D;&#x0A;- Original element: &apos;csc143.test.sudoku.SudokuTest3A&apos;&#x0D;&#x0A;- Renamed element: &apos;csc143.test.sudoku.SudokuTest3a&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SudokuTest3A&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;csc143.test.sudoku{SudokuTest3A.java[SudokuTest3A" matchStrategy="1" name="SudokuTest3a" qualified="false" references="true" similarDeclarations="false" stamp="1434087433378" textual="false" version="1.0"/>
+</session>

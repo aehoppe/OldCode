@@ -1,0 +1,24 @@
+Alexander Hoppe
+11 June 2015
+Sudoku View Assignment
+
+Planning notes for SudokuView: 
+    Make it a subclass of SudokuBoard
+    Give it fields for selectedRow, selectedColumn, and base (reference)
+    Make it an observer of SudokuBase and repaint it each time it updates
+    Make it override the paintComponent with the same things it did before, but
+     with an additional drawing statement for the selected row/col
+    Give it listener inner class for selecting the cell (gonna have to do some
+        fancy math here to figure out where to draw the selected cell)
+    
+    This should be pretty easy. 
+    
+Implementation notes:
+    Made copies of fields in the SudokuView and reinstantiated them b/c wanted 
+to preserve encapsulation of SudokuBoard class and avoid protected fields. 
+
+Observer stuff: The update method calls a repaint, and I overrode fixGivens and 
+setValue in SudokuModel to call super methods and then notify observers. 
+
+Mouse listener: Used a mouseAdapter inner class for SudokuView, and 
+simply used integer division and the getPoint method to select cells. 

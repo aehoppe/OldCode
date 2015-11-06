@@ -1,0 +1,25 @@
+Alexander Hoppe
+May 31 2015
+Assignment 8 Report
+
+Notes:
+    Started out with the javadoc part, easily done. Next, the shape rendering. I
+chose to just do numbers, because my grandmother who loves sudoku will be here 
+over the summer so I want her to be able to play it. Next is the SudokuBase part.
+At this point, I think it will be simplest to simply have the graphics be laid 
+out in one pane and have one large array of values. That way, there will be less
+messing aroud with reference semantics. This is just my thought beforehand. 
+
+YESS! Got all the numbers done without much issue. Just tedium and checking 
+consistency.
+
+On to the SudokuBoard class. 
+
+Grabbed rows and columns from SudokuBase in the constructor and put them as 
+fields.  Held onto the side length of the whole thing in a field for convenience
+
+drawing the board by way of nested for loops. alternate grey using a boolean
+
+Ah! A problem with the boolean, it doesn't flip right for even numbers of columns
+
+Drawing the squares is the same, use a nested for loop. 

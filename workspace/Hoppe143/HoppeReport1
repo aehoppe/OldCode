@@ -1,0 +1,48 @@
+Alexander Hoppe
+
+    I went about starting this project by drawing out a plan of the Roots class
+on a piece of looseleaf paper, basically outlining the sqrt() and cbrt() methods.
+I used pseudocode to write the methods out, basically outlining the variables I 
+would need and the main control structures (a while loop) that I wanted to use.
+From there, I realized that turning the test into its own method would save me 
+some coding, so I wrote that out separately.
+
+    During the coding process, I learned a couple of things and changed my design
+accordingly. I learned that testing for equality at the beginning of the loop 
+didn't work out in this case, because I needed to swap xn1 and xn, my temp var-
+iables, after the test for equality. I ended up making a separate boolean to run
+the test. In addition, I assumed my code would work for a given value of zero, 
+but when I ran the code it did not converge within 100 loops, so I decided it 
+would be easier to make a special case for it.
+
+    Specifically when creating the exception, my initial idea was to make an in-
+ner class that extended Exception, however after discussing it with the professor
+I decided that making a separate class would make more sense, because otherwise 
+it wouldn't be accessible by other clients. I chose to extend RuntimeException
+as well, because that way my exception would be unchecked. I also had a bit of a
+run in with the Serializable interface, whose implications on saving the state 
+of objects sound very interesting!
+
+    I think the most important thing I learned from the planning part of this
+assignment was that it is much easier said than done to translate an algorithm 
+from thoughts on paper into a working bit of code. I also learned all of Newton's
+method and its applications during this phase. During the acutal coding part,
+I learned my Java syntax and good coding style again, as it had been almost four
+months since I had last programmed. When I was writing the exception, I caught a
+glimpse into serialization and refamiliarized myself with the Java API, and from
+the testing and debugging side, I learned a little more about try/catch and the 
+different Exception subclasses. 
+
+    Next time, I would make fewer assumptions from the beginning planning phase 
+and limit my planning to just pseudocode. I would also try to think about the 
+project in terms of more abstract terms until I'm actually coding it. That way, 
+I can be more flexible when I'm coding and do things creatively instead of making
+the mistakes I planned by following a script. I would also get into the habit of
+testing individual pieces of code as I go instead of my habit of assuming every-
+thing works and coding the whole project before testing. I think it will save me
+a lot of trouble in the end. 
+
+I did not do the challenge option because it was spring break for my family and 
+went on vacation over the weekend. I'm already making them come home on Sunday 
+so I didn't want to take anything else away. I gave it a shot, but I prioritized
+elsewhere. I'd love to hear about it on Monday though!

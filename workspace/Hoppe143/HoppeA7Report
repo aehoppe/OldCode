@@ -1,0 +1,35 @@
+Alexander Hoppe
+May 22 2015
+Map Assignment
+Minimal
+
+Starting Notes:
+    Tried to start by writing JUnit tests, but really it's easier once I know 
+how everything works. I'll just wait. Also tried to get into the BetterSet 
+implementation before anything else which was dumb. I wrote test cases for it
+and everything. I'll just drop that and start with the minimal assignment. Prom 
+is tomorrow. 
+
+MyBasicMap:
+    Most of the methods can be copy-pasted from MySimpleSet with a few tweaks!
+Put is a little different, because it updates the value instead of returning 
+false when there's already a key there. 
+
+Report:
+    I went about starting this project by expanding from the set implementation
+from earlier this week. Essentially, I used the same algorithms for each method
+where it applied, and tweaked the others. I did have to make a new type of node,
+this time a MapBSTreeNode, that had key and value references. 
+    Pretty much all the methods from the SimpleSet implementation carried over. 
+One major difference was the put method, which was a void method in this case 
+and not a boolean. That I had to rewrite. Otherwise, not a whole lot different!
+    I was a little surprised at the beginning of this assignment by trying to 
+implement BetterSet, because I thought it would be very straightforward, however
+once I realized the implications of the remove method, I decided it was easier 
+to simply prioritize the minimum deliverable assignment. 
+    I learned a bit more about creative programming and reusing/repurposing 
+algorithms in this assignment, as it was pretty much a slightly different 
+application of the same methods from the SimpleSet. I also learned about priori-
+tizing things, and opted for the minimal assignment in lieu of going to prom. 
+    Next time, I would try to push through it and make JUnit tests beforehand so
+that when I have to fix problems, what I just wrote is still clear in my head. 

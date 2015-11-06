@@ -1,0 +1,35 @@
+Alexander Hoppe
+5/10/15
+Assignment 5 Report
+minus
+
+
+Ok, some notes:
+
+Starting out with SampleUnboundedQueue:
+    Have to make a Node class to hold onto the linked list, but is it worth it 
+to make an encompassing class? I say no for now, maybe it will be later. 
+
+note: crap I made my test cases with numbers instead of Strings! Oh, just kidding
+I just missed one spot where I didn't fix my original faulty int-based test case
+
+ok that didn't work. What's wrong with my test cases? Ah, nothing. It's a
+NullPointerException being caused by my add() method. 
+
+Hmm. something's funky with my size() method. 
+
+YESSSSSSSS passed all my tests!
+
+SampleUnboundedStack:
+    toString methods for stacks were in backwards order! DANG! fixed that, tests
+passed.
+
+On to array implementations! 
+    
+    BoundedQueue went without issue, really. I set it up so adding to the queue
+is at the back of the array and removing comes from the front (has to be shifted)
+
+    BoundedStack is structured so the top of the stack is at the open end of the
+array, as is most logical, really. 
+
+gaaaaah my toString()s are still messed up for the stacks....

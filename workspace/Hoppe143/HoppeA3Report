@@ -1,0 +1,52 @@
+Alexander Hoppe
+26 Apr 2015
+Assignment 3 Report
+
+Starting out notes:
+    First thing's first, download the starting point code and figure out how it 
+works. Ok, looks like each filter is its own class that gets loaded in to the 
+SnapShop object by the SnapShopConfiguration class. I guess I'll just jump right
+into the first filter!
+    Alright, the vertical flip was easy, just use the same loop structure as the
+horizontal flip but switch the height and width and row and col.
+    Grayscale one was pretty easy. Get the image data, iterate through it, calcu-
+lating a gray value for each pixel and setting it in an output array, then set 
+the image to the output array. I used an int cast to truncate the double value
+to an int.
+    Grayscale two is the same as grayscale one, only using integer division when
+calculating the gray value.
+    For the three by three filters, I'm going to use an abstract superclass for
+all of them that defines the weight-calculating algorithm, and each subclass 
+will have its own array of weights that are fed in. 
+    Ok, so I've designed the superclass ThreeByThreeFilter to basically calculate
+the results of each filter based on the image and the weights field of the object
+by creating a few helper methods to load in the surrounding pixels, sum up their 
+colors multiplied by the respective weight one by one and then divide by the sum 
+of the weights (or one if the sum is zero). Each subclass should only need a con-
+structor that sets the weights array to the correct values, and it should work.
+    Hah! I learned something new! You can only use array constants like:
+    
+    a = {1, 2, 3};
+    
+when you declare the variable directly beforehand. The above won't compile, but 
+the following actually does:
+    
+    a = new int[] {1, 2, 3};
+    
+Seems like it's something to do with the compiler knowing what type the values 
+inside the array constant are. Makes sense. 
+    The superclass method for the three by three filters works great! All I have
+to do is write in an initialization for the weights array in the constructor of 
+any new three by three filter. I could make my own, no problem!
+
+    I think the most important thing I learned from this portion of the assign-
+ment was how to plan well ahead of time to reduce repetitive code. I think that 
+I used the superclass of the three by three filters very effectively.
+
+    Next time, I would try to figure out all the mechanics of the starter code at
+the beginning. I stumbled through it a little at the start, although it wasn't 
+too bad. I would also try to manage my time a little better so that I could do 
+the better version of the assignment. Honestly, this week I was visiting Carnegie
+Mellon in Pittsburgh so I was a little strapped for time. I did the standard 
+assignment, but I also made the three by three filters very efficient just for
+fun. 

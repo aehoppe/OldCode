@@ -1,0 +1,69 @@
+Alexander Hoppe
+May 13 2015
+Stack/Queue Assignment Report
+Standard
+
+Prelim notes: Trouble with sox and with jar files resolved, and linkedlist time
+problem fixed as well. 
+
+Movie clips:
+Mystery: "Klaatu, barada, nikto" -The Day the Earth Stood Still (asked my dad)
+Sample1: "To infinity and beyond!" -Toy Story
+Sample2: "I'm sorry Dave, I'm afraid I can't do that." -2001 A Space Odyssey
+Sample3: "My....precious..." -Lord of the Rings
+
+Report:
+    For each part of this project, I started out by studying the writeup at the 
+beginning. I also opened a notes text file right off the bat for each one. Begin-
+ning with the JUnit tests, I started out by planning out all of the public inter-
+faces of each interface. From there, I planned out all of the tests I needed to 
+make which was rather difficult, but made the actual writing much smoother. From
+that point onward, it was pretty much just typing out all the test cases. I did 
+it in one big purge on a plane. 
+    For the next part of the project, implementing the stubbed out classes from
+the previous assignment, I just dove right into it once I understood what the 
+specifications were. It was really easy, since all the javadoc comments and 
+method headers were already there, so I didn't have to do too much planning, 
+mostly a lot of simple problem solving. Also, having the test cases already made
+made the coding process 10 times easier, as I could check that each part worked 
+as soon as I had made it. 
+    Getting started on the backmasking project was also pretty simple. I just 
+looked at the specifications, planned out all my methods (went through 3 layouts
+of the code) then dove in!
+
+    As far as what works and what doesn't, I'd say I learned a lot. First of all,
+it works really well to plan out all of the code to the point of designing JUnit
+tests for it beforehand. It makes the writing process so much easier and quicker
+at the cost of a lot of overhead at the beginning. I also learned, from the part
+where I implemented the stack and queue classes at the last minute, that procras-
+tination really doesn't mix well with coding.
+   
+    I ran into a variety of problems with this assignment. In the beginning, the
+main issue was planning out the tests that I had to make in my test cases. That 
+was tough, and it required a lot of abstract thinking and studying the spec for
+the code. However, it did make things easier after that. I also ran into the 
+really dumb problem of having written my test cases with a primitive type, ints,
+before implementing the classes, and I eventually had to go back and ctrl+f them
+all out. I also had a little trouble implementing the toString() with a linked
+list, which was a bit of a pain, and I eventually gave up on it because it was
+not really a crucial part. Fortunately, I didn't have any omissions from my test
+cases, so everything ran pretty smoothly. For the backmasking part of this 
+project, I ran into a whole host of technical problems. First, running a jar 
+and adding a jar to the classpath turned out not to play nice, so now the 
+submission criteria got changed. In addition, sox version 14.4.2 didn't do the
+transformation from .dat to .wav correctly, so we changed to version 14.4.1, and 
+finally some of the sample files were stereo, so that had to be changed. In the
+end, however, it was a fairly simple assignment on the code side. 
+
+    I think the most important thing I learned from this project was a better 
+understanding of the code design life cycle. Starting from the beginning with 
+test cases and comments all planned out and written and then progressing through
+implementation and eventually use made a lot more sense having done it all now. 
+In addition, I learned that procrastination is extremely dangerous in a project
+like this, and I even had to go back and re-do sloppy work from previous weeks a
+few times. On top of that, I got a fair bit of experience with the jar utility 
+and with working at the command line, which is both powerful and unforgiving. 
+Perhaps even more important than all that, however, was learning that talking to
+the professor and coming to office hours is the easiest way to resolve problems
+and also to learn a fair bit, and that getting a jump start allows me to get 
+those sorts of opportunities. 
